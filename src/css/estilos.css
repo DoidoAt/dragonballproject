@@ -1,0 +1,306 @@
+/* Geral */
+html {
+    color: #000000;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #9443d8;
+    margin: 0 auto;
+    max-width: 1120px;
+    background-size: 120% 120%;
+}
+
+
+
+
+/* Personagens e Diversos*/
+
+
+.personagens {
+    background-color: #4c0f7e;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+    position: fixed;
+}
+
+.personagens .botoes-personagens-diversos {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.personagens .botoes-personagens-diversos button {
+    background: none;
+    background-color: rgb(216, 134, 26);
+    border: 1px solid black;
+    border-radius: 10%;
+    height: 30px;
+    width: 85px;
+    cursor: pointer;
+}
+
+.personagens .botoes-personagens-diversos button:hover {
+    background-color: #040b66;
+    color: #ffffff;
+}
+
+.personagens .container-personagens {
+    border: 5px solid black;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.personagens .container-personagens .personagem {
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+}
+
+.personagens .container-personagens .personagem img {
+    height: 92px;
+}
+
+.personagens .container-personagens .personagem.ativo{
+    background: #ca7c06;
+}
+
+.personagens .container-personagens .personagem:hover {
+    background: #270091;
+    transform: scale(1.5);
+}
+
+.personagens .container-personagens .personagem.ativo:hover{
+    background: #ca7c06;
+    transform: scale(1.5);
+}
+
+.personagens .container-diversos {
+    border: 5px solid black;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    visibility: hidden;
+}
+
+.personagens .container-diversos .diverso {
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+}
+
+.personagens .container-diversos .diverso.ativo{
+    background: #ca7c06;
+}
+
+
+.personagens .container-diversos .diverso:hover{
+    background: #270091;
+    transform: scale(1.5);
+}
+
+.personagens .container-diversos .diverso.ativo:hover{
+    background: #ca7c06;
+    transform: scale(1.5);
+}
+
+
+/* Descrição dos Personagens/Diversos */
+
+.descricao-personagem {
+    background-color: #4c0f7e;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+    position: fixed;
+    color: rgb(170, 145, 5);
+}
+
+.descricao-personagem .escrita {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    word-wrap: break-word;
+    border: 5px solid black;
+    padding: 12px;
+    width: 280px;
+    visibility: hidden;
+}
+
+.descricao-personagem .escrita.base {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+}
+
+.descricao-personagem .habilidades {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 5px solid black;
+    visibility: hidden;
+}
+
+.descricao-personagem .habilidades button {
+    color: #ffffff;
+    background: #353131;
+    border: 3px solid black;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.descricao-personagem .habilidades button:hover {
+    transform: scale(1.5);
+}
+
+.descricao-personagem .habilidades .btn-habilidade.disable {
+    cursor: none;
+    pointer-events: none;
+}
+
+.descricao-personagem .habilidades .btn-habilidade.vazio {
+    cursor: none;
+    pointer-events: none;
+}
+
+.descricao-personagem .habilidades img {
+    height: 30px;
+}
+
+.descricao-personagem .habilidades-diversos {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    border: 5px solid black;
+    visibility: hidden;
+}
+
+.descricao-personagem .habilidades-diversos button {
+    color: #ffffff;
+    background: #353131;
+    border: 3px solid black;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.descricao-personagem .habilidades-diversos button:hover {
+    transform: scale(1.5);
+}
+
+.descricao-personagem .habilidades-diversos .btn-habilidade.disable {
+    cursor: none;
+    pointer-events: none;
+}
+
+.descricao-personagem .habilidades-diversos .btn-habilidade.vazio {
+    cursor: none;
+    pointer-events: none;
+}
+
+.descricao-personagem .habilidades-diversos img {
+    height: 30px;
+}
+
+/* Cenarios */
+
+.cenarios {
+    min-height: calc(100vh - 125px);
+    gap: 50px;
+    justify-content: space-between;
+}
+
+
+.cenarios .cenarios-imagem .cenario {
+    height: 900px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.cenarios .cenarios-imagem .cenario-personagem {
+    height: 100px;
+    position: absolute;
+    left: 48%;
+    top: 50%;
+    transform: translate(-50%, 0);
+    visibility: hidden;
+}
+
+.cenarios .cenarios-imagem .habilidades button {
+    color: #ffffff;
+    background: #353131;
+    border: 3px solid black;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.cenarios .cenarios-imagem .habilidades button:hover {
+    transform: scale(1.5);
+}
+
+.cenarios .cenarios-imagem .habilidades img {
+    height: 100px;
+}
+
+.cenarios .container-cenarios {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 140px;
+    margin-bottom: 15px;
+}
+
+.cenarios .container-cenarios .cenarios-escolha {
+    display: inline;
+}
+
+.cenarios .container-cenarios button {
+    background: rgb(2, 2, 116);
+    cursor: pointer;
+}
+
+.cenarios .container-cenarios .arrow-left {
+    background: #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.cenarios .container-cenarios .arrow-right {
+    background: #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.cenarios .container-cenarios .cenarios-escolha img {
+    gap: 15px;
+    padding: 0 15px;
+    height: 150px;
+    width: 200px;
+}
+
+.cenarios .container-cenarios .cenarios-escolha button {
+    border: 2px solid #000000;
+}
+
+.cenarios .container-cenarios .cenarios-escolha .atual {
+    background: rgb(163, 125, 0);
+}
+
+.cenarios .container-cenarios button:hover {
+    background-color: #660369;
+    transform: scale(1.1);
+}

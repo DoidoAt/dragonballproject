@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+
+</head>
+<body>
+    
+    <div class="personagens">
+
+        <div class="botoes-personagens-diversos">
+            <button class="btn-personagens">Personagens</button>
+            <button class="btn-diversos">Diversos</button>
+        </div>
+
+        <div class="container-personagens">
+            <button class="personagem id1" onclick="mudarPersonagem(this.classList)">
+                <img src="./src/imagens/goku2/34.png" title="Son Goku" alt="Goku">
+            </button>
+            <button class="personagem id2" onclick="mudarPersonagem(this.classList)">
+                <img src="./src/imagens/vegetaBase.png" title="Vegeta IV" alt="Vegeta">
+            </button>
+            <button class="personagem id3" onclick="mudarPersonagem(this.classList)">
+                <img src="./src/imagens/gohan.png" title="Son Gohan" alt="Gohan">
+            </button>
+        </div>
+
+        <div class="container-diversos">
+            <button class="diverso id1" onclick="mudarDiversos(this.classList)">
+                <img src="./src/imagens/dragonBall.png" alt="Dragon Balls">
+            </button>
+            <button class="diverso id2" onclick="mudarDiversos(this.classList)">
+                <img src="#" alt="Ki">
+            </button>
+            <button class="diverso id3" onclick="mudarDiversos(this.classList)">
+                <img src="#" alt="Kame Style">
+            </button>
+        </div>
+    </div>
+
+    <div class="descricao-personagem">
+        <div class="escrita base">
+            <h1 class="nome">
+            </h1>
+            <img class="rosto" src="#" alt="Imagem">
+        </div>
+        <div class="escrita">
+            <h3 class="descricao">
+            </h3>
+        </div>
+        <div class="habilidades">
+            <button class="btn-habilidade id1" onclick="ativarAbilidade(this)">
+                <img src="#" class="habilidade id1" title="Habilidade 1" alt="Habilidade 1">
+            </button>
+            <button class="btn-habilidade id2" onclick="ativarAbilidade(this)">
+                <img src="#" class="habilidade id2" title="Habilidade 2" alt="Habilidade 2">
+            </button>
+            <button class="btn-habilidade id3" onclick="ativarAbilidade(this)">
+                <img src="#" class="habilidade id3" title="Habilidade 3" alt="Habilidade 3">
+            </button>
+            <button class="btn-habilidade id4" onclick="ativarAbilidade(this)">
+                <img src="#" class="habilidade id4" title="Habilidade 4" alt="Habilidade 4">
+            </button>
+            <button class="btn-habilidade id5" onclick="ativarAbilidade(this)">
+                <img src="#" class="transformacao" title="Transformacao" alt="Transformacao">
+            </button>
+        </div>
+        <div class="habilidades-diversos">
+            <button class="btn-habilidade diverso" onclick="ativarDiverso(this)">
+                <img src="./src/imagens/inativo.png" class="habilidade-diverso" alt="habilidade-diverso" title="Ativar">
+            </button>
+        </div>
+    </div>
+
+    <div class="cenarios">
+        <div class="cenarios-imagem">
+
+            <img src="./src/imagens/backgrounds/1.png" alt="Cenario" class="cenario">
+            <img src="" alt="Personagem" class="cenario-personagem">
+
+        </div>
+        
+        <div class="container-cenarios">
+
+            <button class="arrow-left">
+                <img src="./src/imagens/small-left.png" alt="Seta esquerda">
+            </button>
+
+            <ul class="cenarios-escolha">
+                <li>
+                    <i class="fa fa-ellipsis-h"></i>
+                    <button class="esquerda">
+                        <img src="./src/imagens/backgrounds/0.png" alt="Planeta X">
+                    </button>
+                    <button class="atual">
+                        <img src="./src/imagens/backgrounds/1.png" alt="Planeta Y">
+                    </button>
+                    <button class="direita">
+                        <img src="./src/imagens/backgrounds/3.png" alt="Planeta Z">
+                    </button>
+                    <i class="fa fa-ellipsis-h"></i>
+                </li>
+            </ul>
+
+            <button class="arrow-right">
+                <img src="./src/imagens/small-right.png" alt="Seta direita">
+            </button>
+        </div>
+    </div>
+
+    <script src="./src/js/index.js"></script>
+    <script src="./src/js/personas.js"></script>
+    <script src="./src/js/diverso.js"></script>
+
+</body>
+</html>
