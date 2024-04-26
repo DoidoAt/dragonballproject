@@ -272,7 +272,33 @@ const personagens = {
 
             },
             5: function () {
-                mudarPersonagem(["Personagem", "id4"]);
+                limpa();
+                let images = ["src/imagens/goku/0.png", "src/imagens/goku/1.png", "src/imagens/goku/2.png", "src/imagens/goku/3.png", "src/imagens/goku/4.png",
+                    "src/imagens/goku/5.png", "src/imagens/goku/6.png", "src/imagens/goku/7.png", "src/imagens/goku/8.png", "src/imagens/goku2/156.png", "src/imagens/goku2/1-1.png"];
+
+                let mudar = document.querySelector(".cenario-personagem");
+                mudar.style.height = "130px";
+                mudar.src = images[0];
+
+                let index = 0;
+
+                var timer = setInterval(function () {
+                    if (images.includes("src" + mudar.src.split("src")[1]) && index < 11) {
+                        if (index > 8) {
+                            if (mudar.style.left != "48%") {
+                                mudar.src = images[index];
+                            } else {
+                                index += 15;
+                            }
+                        } else {
+                            mudar.src = images[index];
+                        }
+                        index++;
+                    } else {
+                        mudarPersonagem(["Personagem", "id4"]);
+                        clearInterval(timer);
+                    }
+                }, 150);
             }
         },
         tamanho: function (mudar) {
@@ -370,30 +396,16 @@ const personagens = {
     4: {
         nome: "SSJ Goku",
         descricao: ["SSJ Goku"],
-        img: "src/imagens/goku2/113.png",
-        rosto: "src/imagens/goku2/4.png",
+        img: "src/imagens/goku2/110.png",
+        rosto: "src/imagens/goku/9.png",
         habilidades: {
-            1: "Kamehameha src/imagens/kameha.gif",
-            2: "Kienzan src/imagens/goku2/330.png",
-            3: "Instant-Kamehameha src/imagens/instant.webp",
-            4: "Meteor-Combo src/imagens/goku2/339.png"
+            1: "Kienzan src/imagens/goku2/330.png",
+            2: "Instant-Kamehameha src/imagens/instant.webp",
+            3: "Meteor-Combo src/imagens/goku2/339.png",
+            4: ""
         },
         mudarImagem: function () {
-            let images = ["src/imagens/goku2/113.png", "src/imagens/goku2/114.png", "src/imagens/goku2/115.png", "src/imagens/goku2/115.png",
-                "src/imagens/goku2/140.png", "src/imagens/goku2/143.png", "src/imagens/goku2/141.png", "src/imagens/goku2/142.png", "src/imagens/goku2/146.png",
-                "src/imagens/goku2/114.png", "src/imagens/goku2/115.png",
-                "src/imagens/goku2/144.png", "src/imagens/goku2/145.png", "src/imagens/goku2/147.png", "src/imagens/goku2/148.png", "src/imagens/goku2/149.png",
-                "src/imagens/goku2/114.png", "src/imagens/goku2/116.png",
-                "src/imagens/goku2/144.png", "src/imagens/goku2/145.png", "src/imagens/goku2/147.png", "src/imagens/goku2/148.png", "src/imagens/goku2/149.png",
-                "src/imagens/goku2/114.png", "src/imagens/goku2/116.png",
-                "src/imagens/goku2/140.png", "src/imagens/goku2/143.png", "src/imagens/goku2/141.png", "src/imagens/goku2/142.png", "src/imagens/goku2/146.png",
-                "src/imagens/goku2/138.png", "src/imagens/goku2/139.png", "src/imagens/goku2/144.png", "src/imagens/goku2/152.png", "src/imagens/goku2/150.png",
-                "src/imagens/goku2/114.png", "src/imagens/goku2/116.png",
-                "src/imagens/goku2/138.png", "src/imagens/goku2/139.png", "src/imagens/goku2/144.png", "src/imagens/goku2/152.png", "src/imagens/goku2/150.png",
-                "src/imagens/goku2/114.png", "src/imagens/goku2/116.png",
-                "src/imagens/goku2/144.png", "src/imagens/goku2/145.png", "src/imagens/goku2/147.png", "src/imagens/goku2/148.png", "src/imagens/goku2/149.png",
-                "src/imagens/goku2/114.png", "src/imagens/goku2/115.png",
-                "src/imagens/goku2/114.png", "src/imagens/goku2/115.png"];
+            let images = ["src/imagens/goku2/110.png", "src/imagens/goku2/111.png", "src/imagens/goku2/112.png"];
             let index = 0;
 
             let max = images.length - 2;
@@ -402,26 +414,6 @@ const personagens = {
 
             var change = setInterval(function () {
                 if (images.includes("src" + mudar.src.split("src")[1])) {
-                    if (index == 0) {
-                        mudar.style.left = "48%";
-                    }
-                    else if (index == 3) {
-                        mudar.style.left = "37%";
-                    } else if (index == 10) {
-                        mudar.style.left = "28%";
-                    } else if (index == 17) {
-                        mudar.style.left = "45%";
-                    } else if (index == 24) {
-                        mudar.style.left = "55%";
-                    } else if (index == 36) {
-                        mudar.style.left = "62%";
-                    } else if (index == 43) {
-                        mudar.style.left = "71%";
-                    } else if (index == 50) {
-                        mudar.style.left = "59%";
-                    } else if (index == 52) {
-                        mudar.style.left = "48%";
-                    }
                     mudar.src = images[index];
                     index > max ? index = 0 : index++;
                 } else {
@@ -433,7 +425,90 @@ const personagens = {
         habilidadeUsar: {
             1: function () {
                 limpa();
-                return "Test0";
+                let images = ["src/imagens/goku2/171-1.png", "src/imagens/goku2/171.png", "src/imagens/goku2/177.png", "src/imagens/goku2/156.png", "src/imagens/goku2/1-1.png",
+                    "src/imagens/goku2/113.png"];
+                let index = 0;
+                let qtd = 0;
+
+                const mudar = document.querySelector(".cenario-personagem");
+                mudar.src = images[0];
+                mudar.style.left = "25%";
+
+                function atualizar() {
+                    const atua = document.querySelectorAll(".imagem.adicionada");
+                    atua.forEach(element => {
+                        if (parseInt(element.style.left, 10) < 55) {
+                            element.style.left = (parseInt(element.style.left, 10) + 15) + "%";
+                            if (element.style.left == "65%") {
+                                element.src = "src/imagens/effects/23.png";
+                                element.style.height = "100px";
+                                element.style.top = "50%";
+                            }
+                        }
+                    });
+                }
+
+                function criar(num, imag) {
+                    let ima = document.createElement('img');
+                    ima.style.height = "20px";
+                    ima.style.position = "absolute";
+                    ima.style.top = "53%";
+                    ima.style.left = num + "%";
+                    ima.src = imag;
+                    ima.classList = "imagem adicionada";
+                    return ima;
+                }
+
+                var timer = setInterval(function () {
+                    if (images.includes("src" + mudar.src.split("src")[1])) {
+                        if (qtd < 4) {
+                            mudar.src = images[index];
+                            if (index == 2) {
+                                qtd++;
+                                atualizar();
+                                document.querySelector(".cenarios-imagem").appendChild(criar(35, "src/imagens/goku2/330.png"))
+                            } else {
+                                atualizar();
+                            }
+                            index > 1 ? index = 0 : index++;
+                        } else if (qtd > 3 && qtd < 7) {
+                            atualizar();
+                            qtd++;
+                        } else if (qtd == 7) {
+                            limpa()
+                            document.querySelector(".cenarios-imagem").appendChild(criar(65, "src/imagens/effects/33.png"));
+                            const im = document.querySelector(".imagem.adicionada");
+                            im.style.height = "100px";
+                            im.style.top = "50%";
+                            mudar.src = "src/imagens/goku2/156.png";
+                            qtd++;
+                        } else if (qtd == 8) {
+                            document.querySelector(".imagem.adicionada").src = "src/imagens/effects/32.png";
+                            mudar.src = "src/imagens/goku2/1-1.png";
+                            qtd++;
+                        } else if (qtd == 9) {
+                            document.querySelector(".imagem.adicionada").src = "src/imagens/effects/31.png";
+                            mudar.style.left = "48%";
+                            qtd++;
+                        } else if (qtd == 10) {
+                            limpa();
+                            mudar.src = "src/imagens/goku2/113.png";
+                            qtd++;
+                        } else if (qtd == 11) {
+                            mudar.src = "src/imagens/goku2/156.png";
+                            qtd++;
+                        } else if (qtd == 12) {
+                            mudar.src = "src/imagens/goku2/1-1.png";
+                            qtd++;
+                        } else if (qtd == 13) {
+                            mudar.src = images[0];
+                            mudar.style.left = "25%";
+                            qtd = 0;
+                        }
+                    } else {
+                        clearInterval(timer);
+                    }
+                }, 150);
             },
             2: function () {
                 limpa();
@@ -453,7 +528,7 @@ const personagens = {
         },
         tamanho: function (mudar) {
             mudar.style.height = "100px";
-            mudar.style.top = "50%";
+            mudar.style.top = "53%";
             mudar.style.left = "48%";
         }
     },
