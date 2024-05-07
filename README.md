@@ -6,7 +6,7 @@ Um projeto pessoal envolvendo a série Dragon Ball. O projeto permite a visualiz
 
 
 # Personagens Funcionais
-Goku: Base;
+Goku: Completo;
 
 
 # Objetos/Personagens/Conceitos
